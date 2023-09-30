@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Certificate Verification</title>
+    <style>
+        /* Common styles for all screen sizes */
+        /* Input search box styles */
+
+        /* Success message styles */
+        #success-message {
+            display: none;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #success-message h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Show the success message when the certificate is verified */
+        #result.verified #success-message {
+            display: block;
+        }
+
+        input[type="text"] {
+            width: 80%; /* Reduce the width to make it smaller */
+            padding: 10px;
+            border: 1px solid #007bff;
+            border-radius: 25px;
+            background-color: transparent;
+            color: #007bff;
+            transition: all 0.3s ease;
+            margin: 0 auto; /* Center horizontally */
+            display: block; /* Ensure it takes full width */
+        }
+
+        /* Company logo styles */
+        .company-logo {
+            max-width: 200px; /* Adjust the max width as needed */
+            display: block; /* Center the image horizontally */
+            margin: 0 auto 20px; /* Add spacing below the logo */
+        }
+
+        /* Center vertically within the container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            height: auto; /* Full viewport height */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('pexels-pixabay-268533.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Horizontal centering */
+            align-items: center; /* Vertical centering */
+            min-height: 100vh; /* Ensure the body covers the full viewport height */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(245, 225, 135); /* Semi-transparent white background */
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #080505;
+            border-radius: 5px;
+            margin-bottom: 10px; /* Add bottom margin to separate input fields */
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            display: none;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Media queries for responsiveness */
+
+        /* Mobile devices */
+        @media (max-width: 480px) {
+            .container {
+                max-width: 90%;
+                padding: 10px;
+            }
+        }
+
+        /* Tablets and smaller desktops */
+        @media (min-width: 481px) and (max-width: 1024px) {
+            .container {
+                max-width: 70%;
+            }
+        }
+
+        /* Larger desktops and laptops */
+        @media (min-width: 1025px) {
+            .container {
+                max-width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Gold Luxury Business Logo.png" alt="Company Logo" class="company-logo">
+        <h1>Certificate Verification</h1>
+        <form id="verification-form">
+            <input type="text" id="certificate-id" placeholder="Enter Certificate ID">
+            <button type="submit">Verify</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>Verification Result:</h2>
+            <p id="student-details"></p>
+        </div>
+        <div id="success-message" class="hidden">
+            <h2>Congratulations!</h2>
+            <p>Your certificate is verified.</p>
+        </div>
+    </div>
+    <script>
+        // Sample student details (replace with your data)
+        const studentData = [
+            { certificateId: "ADV860964", name: "Vinay Kumar", Domain: "Java Developer", Starting_date: "15/09/2023", Ending_date: "15/10/2023" },
+            { certificateId: "ADV860965", name: "Jane Smith", Domain: "Data Science", Starting_date: "15/09/2023", Ending_date: "15/10/2023" },
+        ];
+
+        const form = document.getElementById("verification-form");
+        const certificateIdInput = document.getElementById("certificate-id");
+        const resultDiv = document.getElementById("result");
+        const studentDetails = document.getElementById("student-details");
+        const successMessage = document.getElementById("success-message");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const certificateId = certificateIdInput.value.trim();
+
+            const student = studentData.find((student) => student.certificateId === certificateId);
+
+            if (student) {
+                resultDiv.style.display = "block";
+                studentDetails.innerHTML = `
+                    <strong>Name:</strong> ${student.name}<br>
+                    <strong>Domain:</strong> ${student.Domain}<br>
+                    <strong>Starting Date:</strong> ${student.Starting_date}<br>
+                    <strong>Ending Date:</strong> ${student.Ending_date}<br>
+                `;
+                successMessage.style.display = "block"; // Show the success message
+            } else {
+                resultDiv.style.display = "none";
+                successMessage.style.display = "none"; // Hide the success message
+                alert("Certificate ID not found. Please check the ID and try again.");
+            }
+        });
+    </script>
+</body>
+</html>
