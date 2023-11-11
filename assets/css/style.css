@@ -9,6 +9,20 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+  /* CSS to make the icons smaller */
+  .project-img img {
+    max-width: 80px; /* Adjust the size as needed */
+    height: auto;
+  }
+  .project-item {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -400,12 +414,15 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+
+  margin-top: 50px;
 }
 
 #hero h2 {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 50px;
   font-size: 24px;
+  margin-top: 30px;
 }
 
 #hero .btn-get-started {

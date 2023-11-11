@@ -1,9 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>adv indian coder</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/Black &  Blue Simple Company Logo .png" rel="icon">
+  <link href="assets/img/Black &  Blue Simple Company Logo .png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  
+
+  <!-- Template Main CSS File -->
+
+  <style>
+
+    /* Global Styles */
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000; /* Change color according to your design */
+}
+
+/* Header Section */
+#header {
+    background-color: #fff; /* Change to your desired background color */
+    height: 80px;
+    border-bottom: 1px solid #eee; /* Add a border if needed */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 20px;
+}
+
+#header .logo {
+    font-size: 24px; /* Adjust size as needed */
+    font-weight: 700;
+}
+
+#header .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#header .navbar ul li {
+    margin: 0 10px;
+}
+
+#header .navbar ul li a {
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#header .navbar ul li a:hover {
+    background-color: #f0f0f0; /* Change color on hover */
+}
+
+#header .mobile-nav-toggle {
+    display: none;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    #header .navbar {
+        display: none;
+    }
+
+    #header .mobile-nav-toggle {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    #header .navbar ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        background-color: #fff;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease;
+    }
+
+    #header .navbar ul li {
+        margin: 10px 0;
+    }
+
+    #header .navbar ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    #header .navbar.active ul {
+        left: 0;
+    }
+}
+
+  </style>
+
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-aut"><a href="index.html">ADV indian coder</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html">Internship</a></li>
+          <li><a class="nav-link scrollto" href="index.html">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="index.html">Team</a></li>
+         
+          <!-- Add the Contact link here -->
+          <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+
+
+
     /* Add your CSS styles here */
     body {
       margin: 0;
@@ -191,22 +359,34 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }
     }
+    
+
+
+
+.section__title {
+  display: block;
+  text-align: center;
+  font-size: 36px; /* Adjust the font size */
+  font-weight: bold;
+  color: #444; /* Adjust the color */
+  margin-top: 120px;
+}
+
   </style>
   <title>Contact us</title>
 </head>
 <body>
   <main>
-    <!--=============== PHOTO ===============-->
+    <!--=============== PHOTO ===============-
     <section class="photo section">
       <div class="photo__container">
         <img src="Gold Luxury Business Logo.png" alt="Your Photo" class="photo__image">
       </div>
     </section>
 
-    <!--=============== CONTACT ===============-->
+    =============== CONTACT ===============-->
     <section class="contact section" id="contact">
 
-      <span class="section__subtitle">Get in touch</span>
       <h3 class="section__title">Contact us</h3>
 
       <div class="contact__container container grid">
@@ -279,5 +459,7 @@
 
     
   </main>
+
+  
 </body>
 </html>
