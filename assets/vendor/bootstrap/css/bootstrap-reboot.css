@@ -1,8 +1,5 @@
-/*!
- * Bootstrap Reboot v5.3.2 (https://getbootstrap.com/)
- * Copyright 2011-2023 The Bootstrap Authors
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -123,6 +120,8 @@
   --bs-form-invalid-color: #dc3545;
   --bs-form-invalid-border-color: #dc3545;
 }
+
+
 
 [data-bs-theme=dark] {
   color-scheme: dark;
